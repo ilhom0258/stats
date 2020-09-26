@@ -51,10 +51,25 @@ func CategoriesAvg(payments []types.Payment) map[types.Category]types.Money {
 	categoriesQt := map[types.Category]int64{}
 	for _, payment := range payments {
 		categories[payment.Category] += payment.Amount
-		categoriesQt[payment.Category] ++
+		categoriesQt[payment.Category]++
 	}
 	for key := range categories {
 		categories[key] /= types.Money(categoriesQt[key])
 	}
 	return categories
+}
+
+// PeriodsDynamic calculates the dynamic of payments
+func PeriodsDynamic(first map[types.Category]types.Money, second map[types.Category]types.Money) map[types.Category]types.Money {
+	result := map[types.Category]types.Money{}
+	if len(first) > len(second) {
+		for key := range first {
+			result[key] = second[key] - first[key]
+		}
+		return result
+	}
+	for key := range second {
+		result[key] = second[key] - first[key]
+	}
+	return result
 }
