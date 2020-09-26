@@ -24,3 +24,13 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 
 	return totalValue
 }
+
+//Avg - рассчитывает среднюю сумму платежа
+func Avg(payments []types.Payment) types.Money {
+	var avgPayment types.Money = types.Money(0)
+	for _, payment := range payments {
+		avgPayment += payment.Amount
+	}
+	avgPayment /= types.Money(len(payments))
+	return avgPayment
+}

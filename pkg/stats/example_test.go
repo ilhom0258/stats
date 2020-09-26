@@ -2,6 +2,7 @@ package stats
 
 import (
 	"fmt"
+
 	"github.com/ilhom0258/bank/pkg/types"
 )
 
@@ -32,4 +33,22 @@ func ExampleTotalInCategory() {
 	fmt.Println(result)
 	//Output:
 	//4000
+}
+func ExampleAvg() {
+	payments := []types.Payment{
+		{
+			ID:       1,
+			Amount:   1000,
+			Category: "Auto",
+		},
+		{
+			ID:       1,
+			Amount:   3000,
+			Category: "Auto",
+		},
+	}
+	result := Avg(payments)
+	fmt.Println(result)
+	//Output:
+	//2000
 }
