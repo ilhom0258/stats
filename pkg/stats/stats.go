@@ -3,7 +3,7 @@ package stats
 import (
 	"strings"
 
-	"github.com/ilhom0258/bank/pkg/bank/types"
+	"github.com/ilhom0258/bank/pkg/types"
 )
 
 // TotalInCategory - function for calculating sum in category
