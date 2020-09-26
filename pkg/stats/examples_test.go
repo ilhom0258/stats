@@ -12,25 +12,25 @@ func ExampleTotalInCategory() {
 			ID:       1,
 			Amount:   1000,
 			Category: "Auto",
-			Status : types.StatusOk,
+			Status:   types.StatusOk,
 		},
 		{
 			ID:       2,
 			Amount:   3000,
 			Category: "Auto",
-			Status : types.StatusOk,
+			Status:   types.StatusOk,
 		},
 		{
 			ID:       3,
 			Amount:   1000,
 			Category: "Book",
-			Status : types.StatusOk,
+			Status:   types.StatusOk,
 		},
 		{
 			ID:       4,
 			Amount:   3000,
 			Category: "Book",
-			Status : types.StatusOk,
+			Status:   types.StatusOk,
 		},
 	}
 	result := TotalInCategory(payments, "Book")
@@ -44,13 +44,13 @@ func ExampleAvg() {
 			ID:       1,
 			Amount:   1000,
 			Category: "Auto",
-			Status : types.StatusOk,
+			Status:   types.StatusOk,
 		},
 		{
-			ID:       1,
+			ID:       2,
 			Amount:   3000,
 			Category: "Auto",
-			Status : types.StatusOk,
+			Status:   types.StatusOk,
 		},
 	}
 	result := Avg(payments)
