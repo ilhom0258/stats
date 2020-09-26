@@ -2,6 +2,7 @@ package stats
 
 import (
 	"strings"
+
 	"github.com/ilhom0258/bank/pkg/bank/types"
 )
 
