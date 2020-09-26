@@ -19,7 +19,6 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 		if strings.ToLower(paymentCategoryValue) != strings.ToLower(searchCategory) {
 			continue
 		}
-
 		if payment.Status == types.StatusFail {
 			continue
 		}
@@ -33,12 +32,15 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 //Avg - рассчитывает среднюю сумму платежа
 func Avg(payments []types.Payment) types.Money {
 	var avgPayment types.Money = types.Money(0)
+	var amountPayment types.Money = types.Money(0)
 	for _, payment := range payments {
-		if payment.Status == types.StatusFail {
+		if payment.Status == types.StatusFail{
 			continue
 		}
+		amountPayment ++ 
 		avgPayment += payment.Amount
 	}
-	avgPayment /= types.Money(len(payments))
+
+	avgPayment /= amountPayment
 	return avgPayment
 }
