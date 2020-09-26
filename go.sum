@@ -1,3 +1,7 @@
+github.com/ilhom0258/bank v0.0.0-20200926121337-8ea140de54ca h1:ptWCgGr16ygukgLmDOw4c0x3ZFuitYHcciY/YjEkTbQ=
+github.com/ilhom0258/bank v0.0.0-20200926121337-8ea140de54ca/go.mod h1:pRhTbz+4HgxmZclIP2hI7JsiRBnQZ0kE1W9QpjWAOhk=
 github.com/ilhom0258/bank v1.0.0 h1:2tujFqkJ7AYd7LCpN58l/tIFGVRssqZyvyqA0Ys43TA=
 github.com/ilhom0258/bank/v2 v2.0.0 h1:yQrUJ9bwcPbEGe9FMtyulXhRM900x1fR6Sq2MI530NU=
 github.com/ilhom0258/bank/v2 v2.0.0/go.mod h1:yI9xZmDUPPsJlaIIofIOOsS2iST0LTshOpJ7PNbvX/o=
+github.com/ilhom0258/stats v1.0.0 h1:Bwk4tMrnhl0/8THnMpyY9dH36Yo9kgUShGCwgdhkN9w=
+github.com/ilhom0258/stats v1.0.0/go.mod h1:7inyE3FSporX45At+2uVEDdGguumx7F1yMobesckKJQ=
