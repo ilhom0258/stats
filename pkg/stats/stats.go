@@ -34,13 +34,27 @@ func Avg(payments []types.Payment) types.Money {
 	var avgPayment types.Money = types.Money(0)
 	var amountPayment types.Money = types.Money(0)
 	for _, payment := range payments {
-		if payment.Status == types.StatusFail{
+		if payment.Status == types.StatusFail {
 			continue
 		}
-		amountPayment ++ 
+		amountPayment++
 		avgPayment += payment.Amount
 	}
 
 	avgPayment /= amountPayment
 	return avgPayment
+}
+
+// CategoriesAvg calculates avg spending for each category
+func CategoriesAvg(payments []types.Payment) map[types.Category]types.Money {
+	categories := map[types.Category]types.Money{}
+	categoriesQt := map[types.Category]int64{}
+	for _, payment := range payments {
+		categories[payment.Category] += payment.Amount
+		categoriesQt[payment.Category] ++
+	}
+	for key := range categories {
+		categories[key] /= types.Money(categoriesQt[key])
+	}
+	return categories
 }
